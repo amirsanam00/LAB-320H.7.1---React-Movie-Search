@@ -20,7 +20,7 @@ const getMovie = async(searchTerm) => {
   
   // Make fetch request and store the response
   const response = await fetch(
-    `http://www.omdbapi.com/?apikey=${import.meta.env.VITE_OMDB_API_KEY}&t=${searchTerm}`
+    `https://www.omdbapi.com/?apikey=${import.meta.env.VITE_OMDB_API_KEY}&t=${searchTerm}`
   );
   
   // Parse JSON response into a JavaScript object
@@ -46,4 +46,48 @@ const getMovie = async(searchTerm) => {
       <MovieDisplay movie={movie}/>
     </div>
   );
+}
+
+
+{
+"SCIENCE BOOKS"
+
+"List of books and authors"
+
+const scienceBookList = `https://www.googleapis.com/books/v1/volumes?apikey="askdjsgaj3jkdf34SDKSJ"?q="${bookCategory}"`
+// Now, scienceBookList should return some JSON
+// That JSON RESPONSE might look like:
+/*
+[
+{
+"title": "Biology",
+"authorFirstName": "Bob",
+"authorLastName": "the Bio Guy",
+"bookCover": "ksdjakhelkfhefioefhalkhsdlkahdskadh",
+"content": "akhdaw akjldksd kahdkldjad akdjakjd"
+},
+{
+"title": "Chemistry",
+"authorFirstName": "Jane",
+"authorLastName": "the Chem Gal",
+"bookCover": "ksdjakhelkfhefioefhlkahdskadh",
+"content": "akhdaw akjldksd kahdkldjad akdjakjd"
+},
+{
+"title": "Physics",
+"authorFirstName": "Pete",
+"authorLastName": "the Rock Climber",
+"bookCover": "ksdjakhelkfhefioefhalkhsdlkahddh",
+"content": "akhdaw akjldksd kahdkldjad akdjakjd"
+}
+]
+*/
+
+scienceBookList.forEach( (book) => {
+  book.bookCover
+  ` - ${book.title} by ${book.authorFirstName} ${book.authorLastName}`
+  
+}
+)
+
 }
