@@ -22,6 +22,7 @@ export default function Form(props) {
 
   return (
     <div>
+      <h1>Lookup Movie</h1>
       <form onSubmit={handleSubmit}>
         <input 
         type="text" 
