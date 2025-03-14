@@ -40,11 +40,10 @@ const getMovie = async(searchTerm) => {
     const fetchRandomMovie = () => {
       const moviesList = ["Baby days out", "Lord of The Rings", "Harry Potter", "Final Destination", "Jumanji", "Gladiator" ,"Shrek"];
 
-      const selectedMovie = moviesList[Math.floor(Math.random()* moviesList.length)];
+      const selectedMovie = moviesList[Math.floor(Math.random() * moviesList.length)];
 
-    }
     getMovie(selectedMovie);
-    
+    }
     fetchRandomMovie();
 }, []);
 
